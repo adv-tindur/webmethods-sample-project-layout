@@ -96,7 +96,7 @@
 	</target>
 	
 	<target name="buildIS" depends="">
-		<ant dir="."></ant>
+		<ant dir="./assets/IS"></ant>
 	</target>
 
 	<target name="buildMWS" depends="">
