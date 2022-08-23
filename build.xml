@@ -18,7 +18,7 @@
 	<import file="buildTest.xml"/>
 	
 
-	<taskdef classpath="lib/ant-contrib.jar" /><!--resource="net/sf/antcontrib/antlib.xml"/>-->
+	<taskdef classpath="${antInstallationPath}/ant-contrib-1.0b3.jar" resource="net/sf/antcontrib/antlib.xml"/>
 				
 	<target name="build" depends="initProject,buildWM">		
 		<description>Build project.</description>
