@@ -48,14 +48,7 @@
 		</if>
 				
 		<!-- move build.properties from SVN to the target ABE folder -->
-		<copy file="${abeBuildPropertiesReference}" tofile="${abeHome}/${abeBuildfileDir}/build.properties" overwrite="true">
-			<filterchain>
-				<replacetokens>
-					<token key="SAGHome" value="${SAGHome}"/>
-					<token key="buildOutputDir" value="${buildOutputDir}"/>
-				</replacetokens>
-			</filterchain>
-		</copy>		
+		<copy file="${abeBuildPropertiesReference}" tofile="${abeHome}/${abeBuildfileDir}/build.properties" overwrite="true"/>		
 	</target>
 	
 	
