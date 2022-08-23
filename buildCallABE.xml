@@ -52,6 +52,7 @@
 			<filterchain>
 				<replacetokens>
 					<token key="SAGHome" value="${SAGHome}"/>
+					<token key="buildOutputDir" value="${buildOutputDir}"/>
 				</replacetokens>
 			</filterchain>
 		</copy>		
