@@ -14,9 +14,8 @@ steps:
 - task: BatchScript@1
   inputs:
     filename: 'C:\SoftwareAG_107\install\bin\setenv.bat'
-- task: PowerShell@2
+- task: CmdLine@2
   inputs:
-    targetType: 'inline'
     script: |
       set ANT_HOME=C:/SoftwareAG_107/common/lib/ant
       %ANT_HOME%/bin/ant -f build.xml -DpathCWD=%cd% %*
