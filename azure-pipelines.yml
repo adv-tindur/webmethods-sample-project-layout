@@ -7,7 +7,9 @@ trigger:
 - azure-pipelines
 
 pool:
-  agent: agent
+  name: webMethods Build Server
+  demands:
+    - agent.name -equals dev-wm-02-vm
 
 steps:
 - script: echo Hello, world!
