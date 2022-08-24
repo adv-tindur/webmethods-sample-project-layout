@@ -9,7 +9,7 @@
  -->
 
 <project name="Build and Deploy Solution" default="buildDeployTest" basedir="." >
-	<property file="master_build_Reference/build.properties"/>
+	<property file="${project.properties}"/>
 	<property file="System.properties"/>
         
 	<import file="buildInitProject.xml"/>
