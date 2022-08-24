@@ -11,12 +11,15 @@ pool:
   demands:
     - agent.name -equals dev-wm-02-vm
 steps:
-- task: Ant@1
+- task: CmdLine@2
   inputs:
-    buildFile: 'build.xml'
-    options: 
-    targets: 'build'
-    publishJUnitResults: false
-    antHomeDirectory: 'C:\SoftwareAG_107\common\lib\ant'
-    javaHomeOption: 'Path'
-    jdkUserInputDirectory: 'C:\SoftwareAG_107\jvm\jvm'
+    script: 'ant build'
+#- task: Ant@1
+#  inputs:
+#    buildFile: 'build.xml'
+#    options: 
+#    targets: 'build'
+#    publishJUnitResults: false
+#    antHomeDirectory: 'C:\SoftwareAG_107\common\lib\ant'
+#    javaHomeOption: 'Path'
+#    jdkUserInputDirectory: 'C:\SoftwareAG_107\jvm\jvm'
