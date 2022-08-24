@@ -13,7 +13,9 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'ant build'
+    script: |
+      echo %PATH%
+      ant build
 #- task: Ant@1
 #  inputs:
 #    buildFile: 'build.xml'
