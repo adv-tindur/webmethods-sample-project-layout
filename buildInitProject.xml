@@ -89,7 +89,10 @@
 
 	
 	<!--Main Init targets-->
-	<target name="initSystemProperties" depends="initSAGHome,initDeployerInstallationPath,initDeployerHost,initDeployerPort,initDeployerUsername,initDeployerPassword">
+	<target name="initSystemPropertiesBuild" depends="initSAGHome">
+	</target>
+
+	<target name="initSystemPropertiesDeploy" depends="initSAGHome,initDeployerInstallationPath,initDeployerHost,initDeployerPort,initDeployerUsername,initDeployerPassword">
 	</target>
 	
 	<target name="initMandatoryProperties" depends="initProjcetName,initBuildOutputDir,initRepositoryName,initDeployerProjectDefinition">
@@ -98,7 +101,10 @@
 	<target name="initOptionalProperties" depends="initISProjectsDir,initISConfigDir,initBPMProjectsDir,initMWSProjectsDir,initRulesProjectsDir,initUMProjectDir,initTestPackageNamePattern,initJenkinsReportDir">
 	</target>
 		
-	<target name="initProject" depends="initSystemProperties,initMandatoryProperties,initOptionalProperties" description="init properties needed for the project">
+	<target name="initProjectBuild" depends="initSystemPropertiesBuild,initMandatoryProperties,initOptionalProperties" description="init properties needed for the project">
 	</target>
 	
+	<target name="initProjectDeploy" depends="initSystemPropertiesDeploy,initMandatoryProperties,initOptionalProperties" description="init properties needed for the project">
+	</target>
+
 </project>
