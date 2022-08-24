@@ -11,7 +11,11 @@ pool:
   demands:
     - agent.name -equals dev-wm-02-vm
 steps:
-- task: PowerShell@2
+- task: Ant@1
   inputs:
-    targetType: 'inline'
-    script: 'Write-Host "Hello World"'
+    buildFile: 'build.xml'
+    options: 
+    publishJUnitResults: false
+    antHomeDirectory: 'C:\SoftwareAG_107\common\lib\ant'
+    javaHomeOption: 'Path'
+    jdkUserInputDirectory: 'C:\SoftwareAG_107\jvm\jvm'
