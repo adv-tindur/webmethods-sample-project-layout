@@ -20,7 +20,7 @@
 
 	<taskdef classpath="${antInstallationPath}/ant-contrib-1.0b3.jar" resource="net/sf/antcontrib/antlib.xml"/>
 				
-	<target name="build" depends="initProjectBuild,buildWM">		
+	<target name="build" depends="initProjectBuildTest,buildWM">		
 		<description>Build project.</description>
 	</target>
 		
@@ -28,7 +28,7 @@
 		<description>Deploy project.</description>
 	</target>
 
-        <target name="test" depends="initProject,startTest">
+        <target name="test" depends="initProjectBuildTest,startTest">
 		<description>Run tests.</description>
 	</target>	
 	
