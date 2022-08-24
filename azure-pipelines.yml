@@ -22,6 +22,14 @@ steps:
     javaHomeOption: 'Path'
     jdkUserInputDirectory: 'C:\SoftwareAG_107\jvm\jvm'
 - task: Ant@1
+  inputs:
+    buildFile: 'build.xml'
+    options: 
+    targets: 'test'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+- task: Ant@1
   displayName: Ant Deploy
   inputs:
     buildFile: 'build.xml'
