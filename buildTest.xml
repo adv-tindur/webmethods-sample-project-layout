@@ -21,7 +21,7 @@
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="junit*.jar" />
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="xmlunit*.jar" />
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="serviceInterceptor.jar" />
-		<fileset dir="/lib/testsuite" includes="serviceMockClient.jar" />
+		<fileset dir="lib/testsuite" includes="serviceMockClient.jar" />
 	</path>
 	
 	<target name="startTest" depends="jenkinsCheck">		
