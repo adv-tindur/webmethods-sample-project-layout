@@ -25,7 +25,7 @@ steps:
   displayName: Ant Deploy
   inputs:
     buildFile: 'build.xml'
-    options: 'DtestISPassword=manage DdeployerPassword=manage'
+    options: '-DtestISPassword=manage -DdeployerPassword=manage'
     targets: 'deploy'
     publishJUnitResults: false
     antHomeDirectory: 'C:\SoftwareAG_107\common\lib\ant'
