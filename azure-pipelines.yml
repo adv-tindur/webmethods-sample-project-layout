@@ -15,6 +15,7 @@ steps:
   inputs:
     buildFile: 'build.xml'
     options: 
+    targets: 'build'
     publishJUnitResults: false
     antHomeDirectory: 'C:\SoftwareAG_107\common\lib\ant'
     javaHomeOption: 'Path'
