@@ -20,7 +20,7 @@
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="httpunit.jar" />
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="junit*.jar" />
 		<fileset dir="${SAGHome}/common/lib/testsuite" includes="xmlunit*.jar" />
-		<fileset dir="${SAGHome}/common/lib/testsuite" includes="serviceInterceptor.jar" />
+		<fileset dir="lib/" includes="serviceInterceptor.jar" />
 		<fileset dir="lib/" includes="serviceMockClient.jar" />
 	</path>
 	
